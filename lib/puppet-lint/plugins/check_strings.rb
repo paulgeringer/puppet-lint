@@ -173,7 +173,12 @@ PuppetLint.new_check(:puppet_url_without_modules) do
         :message => "puppet:// URL without modules/#{url_msg}found",
         :line    => token.line,
         :column  => token.column,
+        :token   => token,
       }
     end
+  end
+
+  def fix(problem)
+    problem[:token].value.gsub!(/(puppet:\/\/.*?\/)/, '\1modules/')
   end
 end
