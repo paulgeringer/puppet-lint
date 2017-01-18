@@ -53,6 +53,7 @@ describe PuppetLint::Configuration do
       'fix' => false,
       'show_ignored' => false,
       'scope_variables' => [],
+      'json' => false,
     })
   end
 end

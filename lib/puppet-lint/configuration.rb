@@ -148,6 +148,7 @@ class PuppetLint
       self.with_context = false
       self.file_server_conf = false
       self.fix = false
+      self.json = false
       self.show_ignored = false
       self.scope_variables = []
     end
